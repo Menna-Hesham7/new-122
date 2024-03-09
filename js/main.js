@@ -1,29 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>المركز العالمي  </title>
-        <link rel="icon" href="images/لوجو الموقع.png">
-        <!-- Main template css file -->
-        <link rel="stylesheet" href="css/styel.css">
-        <!-- Render All Elements Normalize -->
-        <link rel="stylesheet" href="css/normalize.css">
-        <!-- Googel Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;0,700;0,800;1,300&family=Work+Sans:wght@200;300;500;600;700;800&display=swap" rel="stylesheet">
-        <!-- Font Awesom Library -->
-        <link rel="stylesheet" href="css/all.min.css" />
-        <!-- BOOTSTRAP CSS -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-    </head>
-<body dir="rtl">
+//! start menu 
+function check(){
+
+    const checkbox = document.querySelector("#checkbox")
+    const nav = document.querySelector("#nav")
+
+    // nav.classList.toggle("none");
+    console.log(nav)
+    console.log(checkbox)
+
+    if(checkbox.checked){
+        nav.classList.add("flex")
+        nav.classList.remove("none");;
+    }else{
+        nav.classList.add("none");
+        nav.classList.remove("flex")
+    }
+}
+//! end menu 
 
 
-<!--   HEADER   -->
-<header class="min-header" id="min-header ">
-    <div class="container" >
+
+
+//! stert Header 
+    function header(){
+    let header = document.getElementById("min-header")
+    header.innerHTML=`
+    <div class="container">
         <ul>
             <li>
                 <div class="login-container">
@@ -75,81 +77,22 @@
         <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         </form>
-    </div>
-</header>
+    </div>`
+}
+header()
+//? stert scroll Header 
+window.addEventListener("scroll", function() {
+    let header = document.querySelector("header");
+    header.classList.toggle("sticky",window .scrollY > 100 );
+    })       
+//? End scroll Header 
+//! End Header
 
 
 
 
 
-<!--   LAINDING   -->
-<div class="lainding">
-    <div class="container">
-        <div class="box">
-            <img src="images/صورة واجهة الموقع.png" alt="">
-        </div>
-        <div class="text">
-            <img src="images/لوجو الموقع.png" alt="">
-            <p>دلوقتي تقدر تحجز صيانتك مع المركز العالمي عن طريق موقعنا الالكتروني الرسمي </p>
-            <a href="now.html">احجز الان</a>
-        </div>
-    </div>
-</div>
-
-
-
-
-<!--   FORM   -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script src="./js/main.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<!-- BOOTSTRAP JS -->
-<link rel="stylesheet" href="js/bootstrap.bundle.min.js">
-</body>
+function toggleLogin() {
+    var popup = document.getElementById("login-popup");
+    popup.style.display = popup.style.display === "block" ? "none" : "block";
+}

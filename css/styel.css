@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;0,700;0,800;1,300&family=Poppins:wght@300;400;500;600;700;900&family=Work+Sans:wght@200;300;500;600;700;800&display=swap');
 /* Start Variables */
 :root {
     --main-color: #ff0000 ;
@@ -97,6 +98,7 @@ header .container {
 }
 header .container ul {
     display: flex;
+    align-items: center;
     gap: 35px;
     margin: 0;
 }
@@ -111,9 +113,163 @@ header .container ul li a:hover {
     padding-bottom: 2px;
     font-weight: 700;
 }
+.wrapper {
+  width: 400px;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #da1313;
+}
+.input-field {
+  position: relative;
+  border-bottom: 2px solid #e41616;
+  margin: 15px 0;
+}
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #d80d0d;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.15s ease;
+}
+label {
+  display: inline-block;
+  padding-bottom: 5px;
+}
+.input-field input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #f10606;
+}
+.input-field input:focus~label,
+.input-field input:valid~label {
+  font-size: 0.8rem;
+  top: 10px;
+  transform: translateY(-120%);
+}
+.forget {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 25px 0 35px 0;
+  color: #ce2626;
+}
+#remember {
+  accent-color: #ce1515;
+}
+.forget label {
+  display: flex;
+  align-items: center;
+}
+.forget label p {
+  margin-left: 8px;
+}
+.wrapper a {
+  color: #e60505;
+  text-decoration: none;
+}
+.wrapper a:hover {
+  text-decoration: underline;
+}
+.submit{
+  background: #b41111;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 16px;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+}
+button:hover {
+  color: #db1313;
+  border-color: #ec0505;
+  background: rgba(255, 255, 255, 0.15);
+}
+.register {
+  text-align: center;
+  margin-top: 30px;
+  color: #f50f0f;
+}
+.login-container {
+  position: relative;
+  text-align: center;
+  margin-top: 0;
+}
+.login-btn {
+  font-size: 21px;
+    color: black;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+.login-btn:hover {
+  color: red;
+  padding-bottom: 2px;
+  font-weight: 700;
+}
+.login-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.login-content {
+  background-color: #fefefe;
+  margin: 7% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+  border-radius: 5px;
+  position: relative;
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.submit {
+  width: fit-content;
+  margin: 10px auto;
+  padding: 15px 25px;
+  font-size: 20px;
+  border-radius: 30px;
+}
 header .container form input {
     border-color: red;
     border-radius: 30px;
+    padding-bottom: 5px;
 }
 
 
@@ -191,17 +347,6 @@ header .container form input {
 
 
 /*   FORM   */
-
-
-
-
-
-
-
-
-
-
-
 
 
 

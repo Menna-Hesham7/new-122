@@ -1,0 +1,14 @@
+.book-now {
+    padding: 50px;
+    display: flex;
+    gap: 100px;
+}
+.book-now .img {
+    width: 40%;
+}
+.book-now .img  img{
+    width: 100%;
+}
+.g-3 {
+    width: 100%;
+}

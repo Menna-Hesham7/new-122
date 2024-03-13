@@ -1,6 +1,7 @@
 .book-now {
     padding: 50px;
     display: flex;
+    align-items: center;
     gap: 100px;
 }
 .book-now .img {
@@ -11,4 +12,34 @@
 }
 .g-3 {
     width: 100%;
+}
+.btn:hover {
+    border: 1px solid #d12626;
+    box-shadow: 2px 1px 8px 2px #d12626;
+}
+/* Small */
+@media (max-width: 771px) {
+    .book-now {
+        flex-direction: column;
+        gap: 0;
+        justify-content: space-evenly;
+    }
+}
+    @media (max-width: 562px) {
+        .book-now .img img {
+            margin-bottom: 20px;
+        }
+    .g-3, .gy-3 {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .g-3, .gy-3 {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .col {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
 }

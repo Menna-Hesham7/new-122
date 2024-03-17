@@ -96,3 +96,7 @@ function toggleLogin() {
     var popup = document.getElementById("login-popup");
     popup.style.display = popup.style.display === "block" ? "none" : "block";
 }
+function toggle2Login() {
+    var popup = document.getElementById("in-login-popup");
+    popup.style.display = popup.style.display === "block" ? "none" : "block";
+}

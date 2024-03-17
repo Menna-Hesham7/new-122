@@ -86,7 +86,7 @@ header {
     width: 100%;
 }
 header .container {
-  max-height: 82px;
+    max-height: 75px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -104,14 +104,15 @@ header .container ul {
     margin: 0;
 }
 header .container ul li a {
-    font-size: 21px;
-    color: black;
-    transition: .3s;
-    text-decoration: none;
+  font-size: 20px;
+  color: black;
+  transition: .3s;
+  text-decoration: none;
+  font-family: system-ui;
+  font-weight: 600;
 }
 header .container ul li a:hover {
     color: red;
-    padding-bottom: 2px;
     font-weight: 700;
 }
 .wrapper {
@@ -218,15 +219,17 @@ button:hover {
   margin-top: 0;
 }
 .login-btn {
-  font-size: 21px;
-    color: black;
+  font-size: 20px;
+  color: black;
+  transition: .3s;
+  font-family: system-ui;
+  font-weight: 600;
   border: none;
   cursor: pointer;
   background: none;
 }
 .login-btn:hover {
   color: red;
-  padding-bottom: 2px;
   font-weight: 700;
 }
 .login-popup {
@@ -270,8 +273,86 @@ button:hover {
 .container .logo img {
   height: 85px ;
 }
-/* Small */
+/*!  HAMBURGER  */
+.hamburger {
+    cursor: pointer;
+  }
+  @media (min-width:768px){
+    .hamburger{
+        display: none;
+    }
+  }
+  .hamburger input {
+    display: none;
+  }
+  
+  .hamburger svg {
+    /* The size of the SVG defines the overall size */
+    height: 3em;
+    /* Define the transition for transforming the SVG */
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .line {
+    fill: none;
+    stroke: var(--main-color);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    /* Define the transition for transforming the Stroke */
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .line-top-bottom {
+    stroke-dasharray: 12 63;
+  }
+  
+  .hamburger input:checked + svg {
+    transform: rotate(-45deg);
+  }
+  
+  .hamburger input:checked + svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+  }
+/* X.Small */
+@media (min-width: 769px) {
+  header .container ul {
+    gap: 20px;
+  }
+  .login-btn {
+    font-size: 18px;
+  }
+  header .container ul li a {
+    font-size: 18px;
+  }
+}
 @media (max-width: 768px) {
+  header .container {
+    max-height: 60px;
+  }
+  .hamburger{
+    position: relative;
+  }
+  .hamburger:hover + ul {
+    display: flex;
+  }
+  header .container ul {
+    display: none;
+    position: absolute;
+    padding: 35px 30px 35px 60px;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    background-color: #730000;
+    width: 100%;
+    border-radius: 50px;
+    gap: 25px;
+  }
+  .container .logo img {
+    height: 60px ;
+  }
 }
 /* Medium */
 @media (max-width: 991px) {
@@ -298,6 +379,8 @@ button:hover {
     min-height: 100vh;
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 .lainding::after{
     content: "";
@@ -326,7 +409,6 @@ button:hover {
 }
 .lainding .container {
     display: flex;
-    padding-top: 100px;
 }
 .lainding .container .box img{
     padding-top: 50px;
@@ -358,9 +440,6 @@ button:hover {
     border: 1px solid #d12626;
     box-shadow: 2px 1px 8px 2px #d12626;
 }
-/* Small */
-@media (max-width: 768px) {
-}
 /* Medium */
 @media (max-width: 991px) {
   .lainding .container .box img {
@@ -372,8 +451,7 @@ button:hover {
     width: 30%;
 }
   .lainding .container {
-    display: flex;
-    padding-top: 135px;
+    padding-top: 100px;
     flex-direction: column;
     text-align: center;
     gap: 50px;
@@ -386,8 +464,44 @@ button:hover {
   }
   .lainding .container .text p {
     margin-bottom: 20px;
+  }
+}
+/* Small */
+@media (max-width: 768px) {
+  .lainding .container {
+    flex-direction: column;
+    gap: 25px ;
+}
+.lainding .container .box img {
+  width: 55% ;
+}
+  .lainding .container .text img {
+    padding: 0 ;
+    width: 35% ;
+  }
+  .lainding .container .text {
+    flex-direction: column;
+  }
+}
+/* X.Small */
+@media (max-width: 576px) {
+  .lainding .container {
+    padding-top: 100px;
+    flex-direction: column-reverse ;
+  }
+  .lainding .container .box img {
+    width: 100% ;
+  }
+  .lainding .container .text {
+    flex-direction: column ;
+  }
+  .lainding .container .text img {
+    width: 40% ;
+    padding-bottom: 0 ;
 }
 }
+
+
 
 
 
@@ -413,15 +527,38 @@ swiper-slide img {
   margin: 10px 20px;
   padding: 10px 20px;
 }
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
-  display: none !important;
-}
 :host {
   --swiper-theme-color: #ff0022 !important;
 }
-
-
-
+.mySwiper .swiper-pagination {
+  display: none !important;
+}
+.carousel h1 {
+  color: #d12626;
+  text-align: center;
+  padding-bottom: 30px;
+  font-size: 45px;
+  font-weight: revert;
+  font-family: auto;
+}
+/* Small */
+@media (max-width: 768px) {
+  .carousel h1 {
+    padding-bottom: 0;
+    font-size: 30px;
+  }
+  swiper-slide img {
+    margin: 0;
+    padding: 0;
+  }
+}
+/* X.Small */
+@media (max-width: 576px) {
+  .carousel h1 {
+    padding-bottom: 0;
+    font-size: 22px;
+  }
+}
 
 
 

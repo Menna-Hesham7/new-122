@@ -457,6 +457,13 @@ button:hover {
 }
 /* X.Small */
 @media (max-width: 576px) {
+  .lainding::before {
+    display: none;
+  }
+  .lainding::after {
+    top: -145px;
+    left: -100px;
+  }
   .lainding .container {
     padding-top: 100px;
     flex-direction: column-reverse ;
@@ -481,13 +488,6 @@ button:hover {
 }
 /* X.X.Small */
 @media (max-width: 330px) {
-  .lainding::before {
-    display: none;
-  }
-  .lainding::after {
-    top: -145px;
-    left: -100px;
-  }
   .lainding .container .text a {
     font-size: 17px;
     padding: 10px 15px;

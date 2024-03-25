@@ -323,15 +323,15 @@ button:hover {
   }
 }
 /* X.X.Small */
-@media (max-width: 330px) {
+@media (max-width: 360px) {
   header .container ul {
-    gap: 10px;
+    gap: 10px !important;
   }
   header .container ul li a {
-    font-size: 8px ;
+    font-size: 8px !important;
   }
   .login-btn {
-    font-size: 8px ;
+    font-size: 8px !important;
   }
 }
 
@@ -412,12 +412,12 @@ button:hover {
 @media (max-width: 991px) {
   .lainding .container .box img {
     padding-top: 20px;
-    width: 45%;
+    width: 60%;
   }
   .lainding .container .text img {
     padding-bottom: 35px;
-    width: 30%;
-}
+    width: 35%;
+  }
   .lainding .container {
     padding-top: 100px;
     flex-direction: column;
@@ -432,7 +432,11 @@ button:hover {
   }
   .lainding .container .text p {
     margin-bottom: 20px;
+    font-size: 30px;
   }
+  header .container ul {
+    gap: 30px;
+}
 }
 /* Small */
 @media (max-width: 768px) {
@@ -554,7 +558,7 @@ swiper-slide img {
 /* X.Small */
 @media (max-width: 576px) {
   .carousel {
-    padding: 80px 0 ;
+    padding: 80px 0 30px;
   }
   .carousel h1 {
     padding-bottom: 0;
@@ -571,6 +575,107 @@ swiper-slide img {
 
 
 
+/*!   Contact   */
+.contact {
+  padding-top: 50px;
+  padding-bottom: 70px;
+  text-align: center;
+}
+.contact h1 {
+  padding-bottom: 35px;
+  font-size: 55px;
+  font-family: system-ui;
+  color: #d12626;
+}
+.contact .d1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+}
+.contact .d1 i {
+  background-color: #bcbcbc;
+  color: #d12626;
+  width: 70px;
+  height: 70px;
+  font-size: 35px;
+  border-radius: 50%;
+  margin-bottom: 20px ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .4s;
+}
+.contact .d1 i:hover{
+  background-color: #d12626;
+  color: #bcbcbc;
+}
+.contact .d1 h5 {
+  font-size: 21px;
+  font-family: system-ui;
+  padding-bottom: 10px;
+}
+.contact .d1 p {
+  font-size: 20px;
+  max-width: 240px;
+  font-family: system-ui;
+}
+.contact .d1 ul li {
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+.contact .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact .social p {
+  margin: 0;
+  padding-left: 25px;
+  font-size: 20px;
+  font-family: system-ui;
+  color: #d12626;
+  font-weight: 700;
+}
+.contact .social a .fa-whatsapp {
+  font-size: 50px;
+  padding: 0 20px;
+  color: #289d04;
+  transition: .4s;
+}
+.contact .social a .fa-whatsapp:hover{
+  border-bottom: 5px #289d04 double;
+  padding-bottom: 10px;
+}
+.contact .social a .fa-facebook {
+  font-size: 50px;
+  padding: 0 20px;
+  color: #1b78cb;
+  transition: .4s;
+}
+.contact .social a .fa-facebook:hover {
+  border-bottom: 5px #1b78cb double;
+  padding-bottom: 10px;
+}
+/* X.Small */
+@media (max-width: 576px) {
+  .contact h1 {
+    font-size: 30px;
+  }
+  .contact .d1 i {
+    width: 60px;
+    height: 60px;
+    font-size: 25px;
+  }
+  .contact .social {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .contact .social p {
+    font-size: 18px;
+    padding: 0;
+}
+}
 
 
 
@@ -578,9 +683,34 @@ swiper-slide img {
 
 
 
-
-
-
+/*!   BY.MEEE   */
+.by{
+  text-align: center;
+  padding: 20px 0 ;
+  border-top: 1px solid #d12626; 
+}
+.by p {
+  margin: 0;
+  font-size: 19px;
+  font-family: auto;
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+.by p a{
+  font-size: 21px;
+  font-family: auto;
+  font-weight: 600;
+  color: #d12626;
+}
+/* X.Small */
+@media (max-width: 576px) {
+  .by p {
+    font-size: 15px;
+  }
+  .by p a{
+    font-size: 18px;
+  }
+}
 
 
 
